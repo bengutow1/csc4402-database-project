@@ -30,11 +30,9 @@ INSERT INTO Raw_Material (name, hazard_class, physical_state, default_unit, unit
 ('Ammonia', 'Class 2.3 - Toxic Gas', 'Gas', 'kg', 1),
 ('Ethylene', 'Class 2.1 - Flammable Gas', 'Gas', 'kg', 3),
 ('Propylene', 'Class 2.1 - Flammable Gas', 'Gas', 'kg', 4),
-('Benzene', 'Class 3 - Flammable Liquid', 'Liquid', 'L', 6),
 ('Hydrogen', 'Class 2.1 - Flammable Gas', 'Gas', 'm3', 6),
 ('Sulfuric Acid', 'Class 8 - Corrosive', 'Liquid', 'L', 9),
 ('Methanol', 'Class 3 - Flammable Liquid', 'Liquid', 'L', 7),
-('Sodium Hydroxide', 'Class 8 - Corrosive', 'Solid', 'kg', 9),
 ('Catalyst Powder', NULL, 'Solid', 'kg', 8),
 ('Nitrogen', NULL, 'Gas', 'm3', 2);
 
