@@ -44,10 +44,8 @@ INSERT INTO Supplier (name, contact_name, phone, email, address, material_ID) VA
 ('ExxonMobil Chemical', 'David Williams', '+1-832-624-6000', 'david.williams@exxon.com', 'Spring, TX, USA', 4),
 ('Air Liquide', 'Marie Dubois', '+33-1-4062-5555', 'marie.dubois@airliquide.com', 'Paris, France', 5),
 ('INEOS Enterprises', 'James Brown', '+41-21-627-7111', 'james.brown@ineos.com', 'Rolle, Switzerland', 4),
-('PQ Corporation', 'Linda Martinez', '+1-610-651-4200', 'linda.martinez@pqcorp.com', 'Malvern, PA, USA', 9),
 ('Methanex', 'Robert Taylor', '+1-604-661-2600', 'robert.taylor@methanex.com', 'Vancouver, BC, Canada', 7),
-('Kemira', 'Anna Schmidt', '+358-10-8611', 'anna.schmidt@kemira.com', 'Helsinki, Finland', 6),
-('Clariant Catalysts', 'Thomas Weber', '+41-61-469-5111', 'thomas.weber@clariant.com', 'Muttenz, Switzerland', 9);
+('Kemira', 'Anna Schmidt', '+358-10-8611', 'anna.schmidt@kemira.com', 'Helsinki, Finland', 6);
 
 -- 5. Employee (foreign key to Plant)
 INSERT INTO Employee (first_name, last_name, role, department, email, hire_date, plant_ID) VALUES
@@ -89,11 +87,8 @@ INSERT INTO Batch (start_time, end_time, target_quantity, actual_quantity, statu
 -- 8. Batch_Consumption (foreign keys to Batch, Raw_Material)
 INSERT INTO Batch_Consumption (quantity_used, unit, batch_ID, material_ID) VALUES
 (1200.00, 'kg', 1, 1),
-(300.00, 'm3', 1, 10),
 (8500.00, 'kg', 2, 2),
-(125.00, 'kg', 2, 9),
 (5800.00, 'kg', 3, 3),
-(85.00, 'kg', 3, 9),
 (3200.00, 'L', 4, 4),
 (580.00, 'm3', 4, 5),
 (2400.00, 'L', 7, 7),
