@@ -1,7 +1,3 @@
-DROP DATABASE IF EXISTS basf_db;
-CREATE DATABASE basf_db;
-USE basf_db;
-
 CREATE TABLE Plant (
   plant_ID INT AUTO_INCREMENT,
   name VARCHAR(100) NOT NULL,
