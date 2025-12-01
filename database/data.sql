@@ -42,7 +42,7 @@ INSERT INTO Supplier (name, contact_name, phone, email, address, material_ID) VA
 ('Shell Chemical', 'Sarah Johnson', '+1-713-241-6161', 'sarah.johnson@shell.com', 'Houston, TX, USA', 2),
 ('LyondellBasell', 'Michael Chen', '+1-713-309-7200', 'michael.chen@lyondellbasell.com', 'Houston, TX, USA', 3),
 ('ExxonMobil Chemical', 'David Williams', '+1-832-624-6000', 'david.williams@exxon.com', 'Spring, TX, USA', 4),
-('Air Liquide', 'Marie Dubois', '+33-1-4062-5555', 'marie.dubois@airliquide.com', 'Paris, France', 5),
+('Air Liquide', 'Marie Dubois', '+33-1-4062-5555', 'marie.dubois@airliquide.com', 'Paris, France', 8),
 ('INEOS Enterprises', 'James Brown', '+41-21-627-7111', 'james.brown@ineos.com', 'Rolle, Switzerland', 4),
 ('Methanex', 'Robert Taylor', '+1-604-661-2600', 'robert.taylor@methanex.com', 'Vancouver, BC, Canada', 7),
 ('Kemira', 'Anna Schmidt', '+358-10-8611', 'anna.schmidt@kemira.com', 'Helsinki, Finland', 6);
@@ -89,10 +89,10 @@ INSERT INTO Batch_Consumption (quantity_used, unit, batch_ID, material_ID) VALUE
 (1200.00, 'kg', 1, 1),
 (8500.00, 'kg', 2, 2),
 (5800.00, 'kg', 3, 3),
-(3200.00, 'L', 4, 4),
-(580.00, 'm3', 4, 5),
-(2400.00, 'L', 7, 7),
-(650.00, 'L', 7, 6);
+(3200.00, 'm3', 4, 4),
+(580.00, 'L', 4, 5),
+(2400.00, 'L', 7, 6),
+(650.00, 'kg', 7, 7);
 
 -- 9. Quality_Test (foreign keys to Batch, Employee)
 INSERT INTO Quality_Test (sample_time, result_status, comments, batch_ID, performed_by) VALUES
