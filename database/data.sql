@@ -1,9 +1,3 @@
-USE basf_db;
-
--- INSERT INTO statements here. Try to do in order of foreign key dependencies. If not it's fine though :D
-
--- these are test insert into's
-
 -- 1. Plant (no foreign keys)
 INSERT INTO Plant (name, location, start_date, total_capacity_tons) VALUES
 ('BASF Ludwigshafen', 'Ludwigshafen, Germany', '1865-04-06', 250000.00),
