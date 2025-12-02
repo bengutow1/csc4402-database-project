@@ -1,7 +1,6 @@
 # csc4402-database-project
 Database group project for CSC4402 - Database Management class
 
-
 TEMPORARY READ ME AS A BRIEF EXPLANATION OF HOW TO RUN:
 
 Requirements:
