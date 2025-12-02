@@ -1,0 +1,3 @@
+Username	Password	"Permissions (0 for user, 1 for admin)"
+user	user123	0
+admin	admin123	1

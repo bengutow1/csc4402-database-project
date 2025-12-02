@@ -1,7 +1,3 @@
-DROP DATABASE IF EXISTS basf_db;
-CREATE DATABASE basf_db;
-USE basf_db;
-
 CREATE TABLE Plant (
   plant_ID INT AUTO_INCREMENT,
   name VARCHAR(100) NOT NULL,
@@ -18,7 +14,7 @@ CREATE TABLE Unit (
   status ENUM('Active', 'Inactive', 'Maintenance') NOT NULL,
   plant_ID INT NOT NULL, -- Relationship: many Unit tuples to one Plant tuple
   PRIMARY KEY (unit_ID),
-  FOREIGN KEY (plant_ID) REFERENCES Plant(plant_ID)
+  FOREIGN KEY (plant_ID) REFERENCES Plant(plant_ID) ON DELETE CASCADE
 );
 
 CREATE TABLE Raw_Material (
@@ -29,7 +25,7 @@ CREATE TABLE Raw_Material (
   default_unit VARCHAR(20) NOT NULL,
   unit_ID INT UNIQUE, -- Relationship: one Raw_Material tuple to one Unit tuple 
   PRIMARY KEY (material_ID),
-  FOREIGN KEY (unit_ID) REFERENCES Unit(unit_ID)
+  FOREIGN KEY (unit_ID) REFERENCES Unit(unit_ID) ON DELETE CASCADE
 );
 
 CREATE TABLE Supplier (
@@ -41,7 +37,7 @@ CREATE TABLE Supplier (
   address VARCHAR(150), -- 150 chars in case address is long
   material_ID INT NOT NULL, -- Relationship: many Supplier tuples to one Raw_Material tuple
   PRIMARY KEY (supplier_ID),
-  FOREIGN KEY (material_ID) REFERENCES Raw_Material(material_ID)
+  FOREIGN KEY (material_ID) REFERENCES Raw_Material(material_ID) ON DELETE CASCADE
 );
 
 CREATE TABLE Employee (
@@ -54,7 +50,7 @@ CREATE TABLE Employee (
   hire_date DATE,
   plant_ID INT, -- Relationship: many Employee tuples to one Plant tuple
   PRIMARY KEY (employee_ID),
-  FOREIGN KEY (plant_ID) REFERENCES Plant(plant_ID)
+  FOREIGN KEY (plant_ID) REFERENCES Plant(plant_ID) ON DELETE CASCADE
 );
 
 CREATE TABLE Product (
@@ -78,9 +74,9 @@ CREATE TABLE Batch (
   product_ID INT NOT NULL, -- Relationship: many Batch tuples to one Product tuple
   lead_op_ID INT, -- Lead operator responsible for batch; Relationship: many Batch tuples to one Employee tuple
   PRIMARY KEY (batch_ID),
-  FOREIGN KEY (unit_ID) REFERENCES Unit(unit_ID),
-  FOREIGN KEY (product_ID) REFERENCES Product(product_ID),
-  FOREIGN KEY (lead_op_ID) REFERENCES Employee(employee_ID)
+  FOREIGN KEY (unit_ID) REFERENCES Unit(unit_ID) ON DELETE CASCADE,
+  FOREIGN KEY (product_ID) REFERENCES Product(product_ID) ON DELETE CASCADE,
+  FOREIGN KEY (lead_op_ID) REFERENCES Employee(employee_ID) ON DELETE CASCADE
 );
 
 CREATE TABLE Batch_Consumption (
@@ -90,8 +86,8 @@ CREATE TABLE Batch_Consumption (
   batch_ID INT NOT NULL, -- Relationship: many Batch_Consumption tuples to one Batch tuple
   material_ID INT NOT NULL, -- Relationship: many Batch_Consumption tuples to one Raw_Material tuple
   PRIMARY KEY (consumption_ID),
-  FOREIGN KEY (batch_ID) REFERENCES Batch(batch_ID),
-  FOREIGN KEY (material_ID) REFERENCES Raw_Material(material_ID)
+  FOREIGN KEY (batch_ID) REFERENCES Batch(batch_ID) ON DELETE CASCADE,
+  FOREIGN KEY (material_ID) REFERENCES Raw_Material(material_ID) ON DELETE CASCADE
 );
 
 CREATE TABLE Quality_Test (
@@ -102,8 +98,8 @@ CREATE TABLE Quality_Test (
   batch_ID INT NOT NULL, -- Relationship: many Quality_Test tuples to one Batch tuple
   performed_by INT, -- ID of the employee assigned to perform the test; Relationship: many Quality_Test tuples to one Employee tuple
   PRIMARY KEY (test_ID),
-  FOREIGN KEY (batch_ID) REFERENCES Batch(batch_ID),
-  FOREIGN KEY (performed_by) REFERENCES Employee(employee_ID)
+  FOREIGN KEY (batch_ID) REFERENCES Batch(batch_ID) ON DELETE CASCADE,
+  FOREIGN KEY (performed_by) REFERENCES Employee(employee_ID) ON DELETE CASCADE
 );
 
 CREATE TABLE Customer (
@@ -124,7 +120,7 @@ CREATE TABLE Sales_Order (
   status ENUM('Pending', 'Shipped', 'Completed', 'Cancelled') DEFAULT 'Pending',
   customer_ID INT NOT NULL,
   PRIMARY KEY (order_ID),
-  FOREIGN KEY (customer_ID) REFERENCES Customer(customer_ID)
+  FOREIGN KEY (customer_ID) REFERENCES Customer(customer_ID) ON DELETE CASCADE
 );
 
 CREATE TABLE Order_Line (
@@ -136,6 +132,6 @@ CREATE TABLE Order_Line (
   required_grade VARCHAR(50),
   product_ID INT NOT NULL,
   PRIMARY KEY (order_ID, line_num),
-  FOREIGN KEY (order_ID) REFERENCES Sales_Order(order_ID),
-  FOREIGN KEY (product_ID) REFERENCES Product(product_ID)
+  FOREIGN KEY (order_ID) REFERENCES Sales_Order(order_ID) ON DELETE CASCADE,
+  FOREIGN KEY (product_ID) REFERENCES Product(product_ID) ON DELETE CASCADE
 );
