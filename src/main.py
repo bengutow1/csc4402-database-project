@@ -10,6 +10,7 @@ from order_manager import manage_orders
 from customer_manager import manage_customers
 from employee_manager import manage_employees
 from product_manager import manage_products
+from test_query_executor import execute_test_queries
 
 """
 author: Benjamin Gutowski
@@ -148,7 +149,7 @@ def select(selection, cnx, cursor, perms):
         if (perms == 1):
             manage_customers(cnx, cursor)
         else:
-            print("\nEXECUTE TEST QUERIES HERE")
+            execute_test_queries("../database/test_query.sql", cnx, cursor)
     elif selection == 4:
         if (perms == 1):
             manage_employees(cnx, cursor)
@@ -158,7 +159,7 @@ def select(selection, cnx, cursor, perms):
     elif selection == 5 and perms == 1:
         manage_products(cnx, cursor)
     elif selection == 6 and perms == 1:
-        print("\nEXECUTE TEST QUERIES HERE")
+        execute_test_queries("../database/test_query.sql", cnx, cursor)
     elif selection == 7 and perms == 1:
         print("\nExiting the program...")
         sys.exit(0)

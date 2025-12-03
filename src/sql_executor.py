@@ -30,3 +30,4 @@ def execute_sql_file(filepath, cnx, cursor):
         print("Exiting program...")
         sys.exit()
         
+    
