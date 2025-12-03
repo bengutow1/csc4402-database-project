@@ -73,31 +73,18 @@ And add the data in by copying and pasting the queries in ```database/data.sql``
 
 Now, the database schema is set up and data is inserted. The test queries in ```database/test_query.sql``` can be run.
 
-# csc4402-database-project
-Database group project for CSC4402 - Database Management class
+---
 
-TEMPORARY READ ME AS A BRIEF EXPLANATION OF HOW TO RUN:
+## How to execute test queries
 
-Requirements:
-* Python 3.11+ (or 3.x)
-* mysql-connector-python >= 8.0.33
-  * Install with: pip install mysql-connector-python==8.0.33
+Launch the python program and run using the directions above.
 
-Ensure that your MySQL Server is running.
-After cloning the repository, step into the src/ directory and Open in Terminal
-Type the command ```python main.py``` to Launch the Program
+Once you're logged in, press the key associated with the **Execute Database Test Queries** command.
 
-Input your MySQL Information (If you have a local default MySQL install, you should be able to use the default host and user)
-Enter the database name (You can just press enter for default: basf)
+You will be given a description of a test query, press **Enter** to run it. The results will be printed, and after pressing **Enter** again, you will be prompted with the next test query until all of them are executed.
 
-Log in, there are two logins at first but you can add more by adding new rows into the data/users.csv file
-User-Level Permissions:
-* Username: user
-* Password: user123
-Admin-Level Permissions
-* Username: admin
-* Password: admin123
+The actual SQL queries being ran are located in ```database/test_query.sql```. The Python program reads the file and executes each query one at a time.
 
-Navigate through the menu using the commands. There are two permission levels, will elaborate more on which can do what tomorrow prolly.
+### Note: If you update any of the data, the outcomes of the queries may not match the provided outcomes in the report.
 
 
