@@ -57,7 +57,7 @@ Now, you are logged in and ready to use application's features!
 
 --
 
-##How to run the database in MySQL (stand-alone)
+## How to run the database in MySQL (stand-alone)
 
 Start up your MySQL server and log in through preferred program (MySQL Workbench, for example)
 
