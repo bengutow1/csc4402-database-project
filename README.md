@@ -55,7 +55,7 @@ Now, you are logged in and ready to use application's features!
  + List, Modify, Create, and Delete Products
  + Execute Provided Test Queries (located in ```database/test_query.sql```)
 
---
+---
 
 ## How to run the database in MySQL (stand-alone)
 
