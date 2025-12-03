@@ -31,10 +31,10 @@ Enter a database name (You can also press enter to use the default (basf)).
 
 Login with whichever user you prefer to use. There are two logins provided in the ```data/users.csv``` file, but you can add more by modifying the file and adding a new row.
 Provided logins:
-* User-level Permissions
+**User-level Permissions**
  + Username: **user**
  + Password: **user123**
-* Admin-level Permissions
+**Admin-level Permissions**
  + Username **admin**
  + Password: **admin123**
 
