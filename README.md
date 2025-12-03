@@ -30,11 +30,11 @@ Input your MySQL Information (If your MySQL Server is running locally, you shoul
 Enter a database name (You can also press enter to use the default (basf)).
 
 Login with whichever user you prefer to use. There are two logins provided in the ```data/users.csv``` file, but you can add more by modifying the file and adding a new row.
-Provided logins:
-###User-level Permissions Login
+### Provided logins:
+### User-level Permissions Login
  + Username: **user**
  + Password: **user123**
-###Admin-level Permissions Login
+### Admin-level Permissions Login
  + Username **admin**
  + Password: **admin123**
 
