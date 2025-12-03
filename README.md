@@ -59,7 +59,7 @@ Now, you are logged in and ready to use application's features!
 
 ## How to run the database in MySQL (stand-alone)
 
-Start up your MySQL server and log in through preferred program (MySQL Workbench, for example)
+Start up your MySQL server and log in through preferred database management tool (MySQL Workbench, for example)
 
 To create a new database, in MySQL, run:
 ```bash
@@ -67,9 +67,9 @@ CREATE DATABASE <database_name>;
 USE <database_name>;
 ```
 
-Then, copy and paste the SQL queries in ```database/schema.sql``` into MySQL.
+Copy and paste the SQL queries in ```database/schema.sql``` into your database management tool.
 
-And add the data in by copying and pasting the queries in ```database/data.sql``` into MySQL.
+Copy and paste the SQL queries in ```database/data.sql``` to add the data into the MySQL database.
 
 Now, the database schema is set up and data is inserted. The test queries in ```database/test_query.sql``` can be run.
 
