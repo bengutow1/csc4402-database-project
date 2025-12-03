@@ -7,8 +7,12 @@
 First, ensure that your MySQL Server is running and you meet the following requirements:
 * Python 3.11+ (or 3.x)
 * mysql-connector-python (version >= 8.0.33)
-  * Install with: pip install mysql-connector-python==8.0.33
+  * Install with:
+  ```bash
+  pip install mysql-connector-python==8.0.33
+  ```
   * If the program fails to authenticate MySQL credentials, you may need to fully uninstall the ```mysql```, ```mysql-connector```, and ```mysql-connector-python``` Python packages
+ 
 
 Open the downloaded project folder in Terminal.
 
