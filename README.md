@@ -41,12 +41,12 @@ Login with whichever user you prefer to use. There are two logins provided in th
 Now, you are logged in and ready to use application's features!
 
 ## Application User Interface Features
-+ User-level Permissions:
+### User-level Permissions:
  + List and Modify (Limited) Quality Tests
  + List and Modify (Limited) Orders
  + List, Modify (Limited) and Create Order Lines of an Order
  + Execute Provided Test Queries (located in ```database/test_query.sql```)
-+ Admin-level Permissions:
+### Admin-level Permissions:
  + List, Modify, Create, and Delete Quality Tests
  + List, Modify, Create, and Delete Orders
  + List, Modify, Create, and Delete Order Lines of an Order
