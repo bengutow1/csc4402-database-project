@@ -2,7 +2,7 @@
 
 Authors: Cole Heausler, Kyle King, Seth Auzane, Benjamin Gutowski
 
-This is project for my database management class that provides an application user interface for a database constructed around the company BASF. The application user interface first prompts MySQL credentials to connect the Python program to the user's MySQL Server. After successful connection, the program prompts the user for login information (located in ```/data/users.csv```) to determine permission levels (admin or user). Admins are provided full CRUD (Create, Read, Update, Delete) functionality to several tables within the database while users are given a limited command list with limited access to changing certain attributes. There are also some test queries provided in ```/database/test_query.sql``` that test database functionality and are executable within the application user interface.
+This is project for my database management class that provides an application user interface for a database constructed around the company BASF. The application user interface first prompts MySQL credentials to connect the Python program to the user's MySQL Server. After successful connection, the program prompts the user for login information (located in ```/data/users.csv```) to determine permission levels (admin or user). Admins are provided full CRUD (Create, Read, Update, Delete) functionality to several tables within the database while users are given a limited command list with limited access to modifying attributes. There are also some test queries provided in ```/database/test_query.sql``` that test database functionality and are executable within the application user interface.
 
 ---
 
