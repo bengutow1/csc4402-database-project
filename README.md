@@ -2,6 +2,10 @@
 
 ---
 
+## Report
+
+The report and ER Diagram can be found in the ```/report/``` folder.
+
 ## How to run the application user interface code:
 
 First, ensure that your MySQL Server is running and you meet the following requirements:
