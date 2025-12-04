@@ -109,7 +109,7 @@ def create_employee(cnx, cursor):
     role = input("\nEnter the Role: ").strip()
     department = input("\nEnter the Department: ").strip()
     email = input("\nEnter the Email: ").strip()
-    hire_date = input("\nEnter the Hire Date (YYYY-MM-DD: ").strip()
+    hire_date = input("\nEnter the Hire Date (YYYY-MM-DD): ").strip()
     plant_id = input("\nEnter the Plant ID the Employee works at: ").strip()
     
     #Building query using vals array
